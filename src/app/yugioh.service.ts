@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Details } from '../models/models';
+import { CardData } from '../models/models';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,8 +12,8 @@ export class YugiohService {
 
   constructor(private http:HttpClient) { }
 
-findCard(id:number):Observable<Details>{
-return this.http.get<Details>(this.apiUrl+'?id='+id)
+findCard(id:number):Observable<CardData>{
+return this.http.get<CardData>(this.apiUrl+'?id='+id)
 }
 
 }

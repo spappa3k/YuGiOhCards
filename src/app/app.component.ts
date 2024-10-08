@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HeaderComponent } from './header/header.component'; 
 import { YugiohService } from './yugioh.service';
-import { Details } from '../models/models';
+import { CardData } from '../models/models';
 import { HttpClient } from '@angular/common/http'; 
 
 @Component({
@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'YuGiOhCards';
-  dataCard?:Details
+  dataCard?:CardData
 
 constructor(private ys:YugiohService){}
 
