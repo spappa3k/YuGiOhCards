@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardDetailsComponent
   ],
   imports: [
     BrowserModule,

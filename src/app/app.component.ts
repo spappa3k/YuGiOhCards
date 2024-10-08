@@ -17,15 +17,5 @@ export class AppComponent {
 
 constructor(private ys:YugiohService){}
 
-  vai(){
-    this.ys.findCard(91231901).subscribe({
-     next: (data)=>{
-      this.dataCard=data;
-      console.log(this.dataCard);
-   },
-  error: (err)=>{
-    console.log(err)
-  }
-});
-}
+
 }
