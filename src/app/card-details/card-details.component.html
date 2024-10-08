@@ -1,2 +1,18 @@
-<section id="allOfTheCard">
-</section>
+<mat-card *ngIf="dataCard" id="cardContainer">
+   <div class="column1">
+    <mat-card-header>
+      <mat-card-title>{{ dataCard.data[0].name }}</mat-card-title>
+      <mat-card-subtitle>{{ dataCard.data[0].type }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="dataCard.data[0].card_images[0].image_url" alt="Card Image">
+</div>
+<div class="column2">
+    <mat-card-content>
+      <p>{{ dataCard.data[0].desc }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>View More</button>
+    </mat-card-actions>
+</div>
+  </mat-card>
+  

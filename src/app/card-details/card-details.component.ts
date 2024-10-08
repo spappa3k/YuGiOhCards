@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { YugiohService } from '../yugioh.service';
 import { CardData } from '../../models/models';
+import { MaterialModule } from '../material/material.module';
 
 @Component({
   selector: 'app-card-details',

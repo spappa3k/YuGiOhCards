@@ -1,4 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body { 
+  height: 100%; 
+}
+
+body { 
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+#cardContainer {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+    min-width: 128px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+.column1 {
+    flex: 1; /* flex: 1 indica 50% se ci sono due elementi */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.column2 {
+    flex: 1; 
+}
+
+/* Immagine responsiva */
+#cardContainer img {
+    width: 100%;
+    height: auto; 
+}
+
+/* Media query */
+@media (max-width: 600px) {
+    #cardContainer {
+        flex-direction: column; /* Disposizione verticale su schermi piccoli */
+    }
+}
