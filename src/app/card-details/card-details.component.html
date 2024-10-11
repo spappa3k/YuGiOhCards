@@ -10,7 +10,7 @@
     <img mat-card-image [src]="dataCard.data[0].card_images[0].image_url" alt="Card Image">
 </div>
 <div class="column2">
-  <div class="tipo">
+  <div class="tipo" *ngIf="dataCard.data[0].atk">
     <p>Attribute: {{dataCard.data[0].attribute}}</p>
     <p>Level: {{dataCard.data[0].level}}</p>
   </div>
