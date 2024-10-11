@@ -14,9 +14,12 @@
     <p>Attribute: {{dataCard.data[0].attribute}}</p>
     <p>Level: {{dataCard.data[0].level}}</p>
   </div>
-  <div class="AtkDef">
+  <div class="AtkDef" *ngIf="dataCard.data[0].atk">
     <p>ATK: {{dataCard.data[0].atk}}</p>
     <p>DEF: {{dataCard.data[0].def}}</p>
+  </div>
+  <div class="race" *ngIf="!dataCard.data[0].atk">
+    <p>Race: {{dataCard.data[0].race}}</p>
   </div>
     <mat-card-content>
       <p>{{ dataCard.data[0].desc }}</p>

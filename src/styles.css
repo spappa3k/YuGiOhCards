@@ -51,14 +51,14 @@ mat-card-subtitle{
     height: auto; 
 }
 
-.AtkDef, .tipo{
+.AtkDef, .tipo, .race{
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-left: 12px;
 }
 
-.tipo{
+.tipo, .race{
     margin-top: 20px;
 }
 
