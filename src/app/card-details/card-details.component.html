@@ -10,6 +10,10 @@
     <img mat-card-image [src]="dataCard.data[0].card_images[0].image_url" alt="Card Image">
 </div>
 <div class="column2">
+  <div class="AtkDef">
+    <p>ATK: {{dataCard.data[0].atk}}</p>
+    <p>DEF: {{dataCard.data[0].def}}</p>
+  </div>
     <mat-card-content>
       <p>{{ dataCard.data[0].desc }}</p>
     </mat-card-content>

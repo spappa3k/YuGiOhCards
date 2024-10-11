@@ -12,7 +12,11 @@ export interface Card {
   frameType: string;
   desc: string;
   race: string;
-  archetype: string;
+  atk: number; // Attack points
+  def: number; // Defense points
+  level: number; // Level of the monster
+  attribute: string; // Attribute of the monster (e.g. WIND, DARK, etc.)
+  typeline: string[]; // Array of types (e.g., "Insect", "Flip", "Effect")
   ygoprodeck_url: string;
   card_sets: CardSet[];
   card_images: CardImage[];
