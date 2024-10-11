@@ -51,6 +51,18 @@ mat-card-subtitle{
     height: auto; 
 }
 
+.AtkDef, .tipo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 12px;
+}
+
+.tipo{
+    margin-top: 20px;
+}
+
+
 
 
 /* Media query */
