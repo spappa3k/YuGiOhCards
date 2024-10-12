@@ -15,6 +15,7 @@
     <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>Level: {{dataCard.data[0].level}}</p>
   </ng-container>
+  <p>LINK - {{dataCard.data[0].linkval}}</p>
   </div>
   <div class="AtkDef" *ngIf="dataCard.data[0].atk">
     <p>ATK: {{dataCard.data[0].atk}}</p>

@@ -64,9 +64,17 @@ mat-card-subtitle{
 
 /* Searchbar */
 
-.searchField{
-    margin: 0 auto;
+.searchField {
+    position: absolute;
+    z-index: 10;
+    left: 50%; 
+    transform: translateX(-50%); /* Sposta l'elemento indietro della sua larghezza */
+    top:5px;
+    width: 320px;
 }
+
+
+
 
 
 /* Media query */
