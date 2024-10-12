@@ -14,7 +14,7 @@ dataCard?:CardData
   constructor(private ys:YugiohService){}
 
 ngOnInit(): void {
-    this.ys.findCard(67048711).subscribe({
+    this.ys.findCard(76232522).subscribe({
      next: (data)=>{
       this.dataCard=data;
       console.log(this.dataCard);

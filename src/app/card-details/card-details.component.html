@@ -12,11 +12,15 @@
 <div class="column2">
   <div class="tipo" *ngIf="dataCard.data[0].atk">
     <p>Attribute: {{dataCard.data[0].attribute}}</p>
+    <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>Level: {{dataCard.data[0].level}}</p>
+  </ng-container>
   </div>
   <div class="AtkDef" *ngIf="dataCard.data[0].atk">
     <p>ATK: {{dataCard.data[0].atk}}</p>
+    <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>DEF: {{dataCard.data[0].def}}</p>
+  </ng-container>
   </div>
   <div class="race" *ngIf="!dataCard.data[0].atk">
     <p>Race: {{dataCard.data[0].race}}</p>

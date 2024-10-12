@@ -62,7 +62,11 @@ mat-card-subtitle{
     margin-top: 20px;
 }
 
+/* Searchbar */
 
+.searchField{
+    margin: 0 auto;
+}
 
 
 /* Media query */
