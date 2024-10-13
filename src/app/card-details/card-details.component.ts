@@ -24,5 +24,30 @@ ngOnInit(): void {
   }
 });
 }
+getType(type: string): string {
+  switch (type) {
+    case 'Effect Monster':
+        return 'type-effectMonster';
+        case 'Flip Effect Monster':
+        return 'type-effectMonster';
+        case 'Normal Monster':
+      return 'type-normalMonster';
+      case 'Fusion Monster':
+        return 'type-fusionMonster';
+        case 'Link Monster':
+        return 'type-linkMonster';
+        case 'Link Monster':
+          return 'type-linkMonster';
+    case 'Spell Card':
+      return 'type-spell';    
+    case 'Trap Card':
+      return 'type-trap';   
+      
+        
+        default:
+      return '';  // Nessuna classe se il tipo non corrisponde
+  }
+}
+
 }
 

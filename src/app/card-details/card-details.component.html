@@ -2,7 +2,7 @@
    <div class="headerCard">
     <mat-card-header>
       <mat-card-title>{{ dataCard.data[0].name }}</mat-card-title>
-      <mat-card-subtitle>{{ dataCard.data[0].type }}</mat-card-subtitle>
+      <mat-card-subtitle [ngClass]="getType(dataCard.data[0].type)">{{ dataCard.data[0].type }}</mat-card-subtitle>
     </mat-card-header>
 </div>
 <div class="columnsContainer">
