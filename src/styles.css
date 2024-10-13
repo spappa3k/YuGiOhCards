@@ -78,6 +78,45 @@ mat-card-subtitle{
     margin-left: auto;
   }
 
+/* Colori per tipo */
+.type-effectMonster {
+    color: #ffcc00 !important;
+  }
+  
+  .type-normalMonster {
+    color: #ffff99 !important;
+  }
+  
+  .type-fusionMonster {
+    color: #800080 !important;
+  }
+  
+  .type-linkMonster {
+    color: #0000ff !important;
+  }
+  
+  .type-xyzMonster {
+    color: #000000 !important;
+  }
+  
+  .type-ritualMonster {
+    color: #00ccff !important;
+  }
+  
+  .type-spell {
+    color: #00a000 !important;
+  }
+  
+  .type-trap {
+    color: #ff33cc !important;
+  }
+  
+  .type-white {
+    color: #ffffff !important;
+  }
+  
+  
+
 
 /* Media query */
 @media (max-width: 600px) {

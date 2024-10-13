@@ -14,7 +14,7 @@ dataCard?:CardData
   constructor(private ys:YugiohService){}
 
 ngOnInit(): void {
-    this.ys.findCard(68464358).subscribe({
+    this.ys.findCard(59371387).subscribe({   // 68464358 rokket tracer
      next: (data)=>{
       this.dataCard=data;
       console.log(this.dataCard);
@@ -24,7 +24,9 @@ ngOnInit(): void {
   }
 });
 }
+
 getType(type: string): string {
+  console.log('Type:', type); // Aggiungi questo per vedere cosa viene passato
   switch (type) {
     case 'Effect Monster':
         return 'type-effectMonster';
@@ -42,8 +44,8 @@ getType(type: string): string {
           return 'type-xyzMonster';
           case 'Skill Card':
             return 'type-linkMonster';
-          
-        
+            case 'Ritual Effect Monster':
+              return 'type-ritualMonster';
     case 'Spell Card':
       return 'type-spell';    
     case 'Trap Card':
@@ -51,7 +53,7 @@ getType(type: string): string {
       
         
         default:
-      return '';  // Nessuna classe se il tipo non corrisponde
+      return 'type-white';  // Nessuna classe se il tipo non corrisponde
   }
 }
 
