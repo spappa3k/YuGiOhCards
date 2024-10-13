@@ -14,7 +14,7 @@ dataCard?:CardData
   constructor(private ys:YugiohService){}
 
 ngOnInit(): void {
-    this.ys.findCard(76232522).subscribe({
+    this.ys.findCard(68464358).subscribe({
      next: (data)=>{
       this.dataCard=data;
       console.log(this.dataCard);
@@ -32,12 +32,18 @@ getType(type: string): string {
         return 'type-effectMonster';
         case 'Normal Monster':
       return 'type-normalMonster';
+      case 'Tuner Monster':
+        return 'type-effectMonster';
       case 'Fusion Monster':
         return 'type-fusionMonster';
         case 'Link Monster':
         return 'type-linkMonster';
-        case 'Link Monster':
-          return 'type-linkMonster';
+        case 'Xyz Effect Monster':
+          return 'type-xyzMonster';
+          case 'Skill Card':
+            return 'type-linkMonster';
+          
+        
     case 'Spell Card':
       return 'type-spell';    
     case 'Trap Card':
