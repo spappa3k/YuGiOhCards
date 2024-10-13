@@ -74,10 +74,9 @@ mat-card-subtitle{
 }
 
 /* Cuore */
-.example-spacer{
-
-}
-
+  .favorite-icon {
+    margin-left: auto;
+  }
 
 
 /* Media query */
