@@ -17,7 +17,6 @@ ngOnInit(): void {
     this.ys.findCardById(68464358).subscribe({   // 68464358 rokket tracer
      next: (data)=>{
       this.dataCard=data;
-      console.log(this.dataCard);
    },
   error: (err)=>{
     console.log(err)
@@ -26,7 +25,6 @@ ngOnInit(): void {
 }
 
 getType(type: string): string {
-  console.log('Type:', type); // Aggiungi questo per vedere cosa viene passato
   switch (type) {
     case 'Effect Monster':
         return 'type-effectMonster';

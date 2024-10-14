@@ -8,12 +8,14 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardDetailsComponent } from './card-details/card-details.component';
 import { FormsModule } from '@angular/forms';
+import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CardDetailsComponent
+    CardDetailsComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
