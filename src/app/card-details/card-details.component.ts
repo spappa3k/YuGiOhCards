@@ -14,7 +14,7 @@ dataCard?:CardData
   constructor(private ys:YugiohService){}
 
 ngOnInit(): void {
-    this.ys.findCard(68464358).subscribe({   // 68464358 rokket tracer
+    this.ys.findCardById(68464358).subscribe({   // 68464358 rokket tracer
      next: (data)=>{
       this.dataCard=data;
       console.log(this.dataCard);

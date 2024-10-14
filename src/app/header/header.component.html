@@ -14,8 +14,8 @@
           <mat-icon>favorite</mat-icon>
         </button>
         <mat-form-field class="searchField">
-          <input matInput type="search" maxlength="30">
-          <button matSuffix mat-icon-button aria-label="Search">
+          <input matInput [(ngModel)]="searchValue" type="search" maxlength="30">
+          <button matSuffix mat-icon-button aria-label="Search" (click)="onSearch()">
             <mat-icon>search</mat-icon>
           </button>
         </mat-form-field>

@@ -12,8 +12,13 @@ export class YugiohService {
 
   constructor(private http:HttpClient) { }
 
-findCard(id:number):Observable<CardData>{
+findCardById(id:number):Observable<CardData>{
 return this.http.get<CardData>(this.apiUrl+'?id='+id)
 }
 
+findCardByName(name:string):Observable<CardData[]>{
+  return this.http.get<CardData[]>(this.apiUrl+'fname='+name)
+  }
+/*
+https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/
 }
