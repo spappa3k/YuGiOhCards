@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class YugiohService {
+  searchedList?:CardData[]
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
