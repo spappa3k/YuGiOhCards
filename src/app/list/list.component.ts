@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { YugiohService } from '../yugioh.service';
+import { CardData } from '../../models/models';
 
 @Component({
   selector: 'app-list',
@@ -9,6 +10,7 @@ import { YugiohService } from '../yugioh.service';
 })
 export class ListComponent implements OnInit{
 nameSearched?:string
+dataSearched?:CardData[]
 
 constructor(private route:ActivatedRoute, private ys:YugiohService){
 
@@ -26,7 +28,8 @@ this.nameSearched=params['searched'];
 
   doCallToSearch(){
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
-      this.ys.searchedList=data})
+      this.dataSearched=data})
+      console.log("Dati:"+this.dataSearched);
   }
 }
 

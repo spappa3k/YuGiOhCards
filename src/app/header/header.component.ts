@@ -23,8 +23,6 @@ this.showMenuOn=!this.showMenuOn;  /* Inverte il valore */
 
   onSearch(){
 this.nameToSearch=this.searchValue;
-/*this.ys.findCardByName(this.nameToSearch).subscribe(data=>{
-  this.ys.searchedList=data;*/
   this.router.navigate(['/list',this.nameToSearch])
 
 }
