@@ -9,7 +9,7 @@ import { CardData } from '../../models/models';
   styleUrl: './list.component.css'
 })
 export class ListComponent implements OnInit{
-nameSearched?:string
+nameSearched:string=''
 dataSearched?:CardData[]
 
 constructor(private route:ActivatedRoute, private ys:YugiohService){
@@ -18,8 +18,8 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 
 
   ngOnInit(): void {
-   this.route.queryParams.subscribe(params =>{
-this.nameSearched=params['searched'];
+   this.route.paramMap.subscribe(params =>{
+    this.nameSearched = params.get('searchedName') ?? ''; /* Usa il valore di default se e' null*/
      this.doCallToSearch();
       }
 
@@ -28,8 +28,10 @@ this.nameSearched=params['searched'];
 
   doCallToSearch(){
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
-      this.dataSearched=data})
-      console.log("Dati:"+this.dataSearched);
+      this.dataSearched=data;
+      console.log("Data", this.dataSearched);
+    })
+      
   }
 }
 
