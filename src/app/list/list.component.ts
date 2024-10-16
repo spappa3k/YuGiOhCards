@@ -25,8 +25,8 @@ this.nameSearched=params['searched'];
   }
 
   doCallToSearch(){
-    this.ys.findCardByName(this.nameSearched).subscribe(data=>{
-      this.ys.searchedList=data;
+    this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
+      this.ys.searchedList=data})
   }
 }
-}
+
