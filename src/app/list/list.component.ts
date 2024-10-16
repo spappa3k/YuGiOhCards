@@ -19,6 +19,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 
 
   ngOnInit(): void {
+    this.cards = [];
    this.route.paramMap.subscribe(params =>{
     this.nameSearched = params.get('searchedName') ?? ''; /* Usa il valore di default se e' null*/
      this.doCallToSearch();
@@ -35,5 +36,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
     })
       
   }
+
 }
+
 
