@@ -122,8 +122,12 @@ mat-card-subtitle{
   
   /* Card List */
   .container-cards{
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
+  }
+
+  .container-cards ul li{
+   margin-top: 50px;
   }
   
 /* Media query */

@@ -3,7 +3,7 @@
     <ul style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap">
       <li *ngFor="let card of dataSearched.data" style="list-style-type: none; ">
         <mat-card-header>
-          <img mat-card-image [src]="card.card_images[0].image_url_small" alt="Card Image" style="">
+          <img mat-card-image [src]="card.card_images[0].image_url_small" alt="Card Image" style="min-width: 300px; max-height: 438px;">
         </mat-card-header>
       </li>
     </ul>
