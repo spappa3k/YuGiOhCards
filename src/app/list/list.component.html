@@ -1,9 +1,11 @@
 <div *ngIf="dataSearched">
-    <ng-container>
-    <mat-card-header *ngFor="let card of dataSearched.data">
-        <mat-card-title>{{ card.name }}</mat-card-title>
-        <mat-card-subtitle>{{ card.type }}</mat-card-subtitle>
-        <img mat-card-image [src]="card.card_images[0].image_url_small" alt="Card Image">
-      </mat-card-header>
-    </ng-container>
+  <div class="container-cards">
+    <ul style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap">
+      <li *ngFor="let card of dataSearched.data" style="list-style-type: none; ">
+        <mat-card-header>
+          <img mat-card-image [src]="card.card_images[0].image_url_small" alt="Card Image" style="">
+        </mat-card-header>
+      </li>
+    </ul>
+  </div>
 </div>
