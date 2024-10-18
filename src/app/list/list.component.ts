@@ -23,7 +23,9 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
     this.cards = [];
    this.route.paramMap.subscribe(params =>{
     this.nameSearched = params.get('searchedName') ?? ''; /* Usa il valore di default se e' null*/
+    this.cards = [];
     this.cardsMultiplier=0;
+
      this.doCallToSearch();
       }
 
@@ -31,23 +33,15 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
   }
 
   doCallToSearch(){
-    if(this.cards?.length!=0){
-      this.emptyCards();
-    }
 
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
-      this.dataSearched.data=this.dataSearched.data.slice((10*this.cardsMultiplier), (this.cardsMultiplier+1)*210);
+      this.dataSearched.data=this.dataSearched.data.slice((10*this.cardsMultiplier), (this.cardsMultiplier+1)*10);
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
       console.log("Data", this.cards);
     })
       
-  }
-
-  emptyCards(){
-    this.cards = [];
-    this.cardsMultiplier=0;
   }
 
 }
