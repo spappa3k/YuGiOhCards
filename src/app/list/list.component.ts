@@ -31,7 +31,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
   doCallToSearch(){
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
-      this.cards=this.dataSearched.data;
+      this.cards=this.dataSearched.data.slice(0, 10);
       console.log("Data", this.cards);
     })
       
