@@ -31,9 +31,13 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
   }
 
   doCallToSearch(){
+    if(this.cards?.length!=0){
+      this.emptyCards();
+    }
+
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
-      this.dataSearched.data=this.dataSearched.data.slice((20*this.cardsMultiplier), (this.cardsMultiplier+1)*20);
+      this.dataSearched.data=this.dataSearched.data.slice((10*this.cardsMultiplier), (this.cardsMultiplier+1)*210);
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
       console.log("Data", this.cards);
@@ -43,6 +47,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 
   emptyCards(){
     this.cards = [];
+    this.cardsMultiplier=0;
   }
 
 }
