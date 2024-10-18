@@ -12,6 +12,7 @@ export class ListComponent implements OnInit{
 nameSearched?:string
 dataSearched?:CardData
 cards?:Card[]
+cardsMultiplier:number=0
 
 constructor(private route:ActivatedRoute, private ys:YugiohService){
 
@@ -22,6 +23,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
     this.cards = [];
    this.route.paramMap.subscribe(params =>{
     this.nameSearched = params.get('searchedName') ?? ''; /* Usa il valore di default se e' null*/
+    this.cardsMultiplier=0;
      this.doCallToSearch();
       }
 
@@ -31,10 +33,16 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
   doCallToSearch(){
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
-      this.cards=this.dataSearched.data.slice(0, 10);
+      this.dataSearched.data=this.dataSearched.data.slice((20*this.cardsMultiplier), (this.cardsMultiplier+1)*20);
+      this.cards?.push(...this.dataSearched.data)
+      this.cardsMultiplier++;
       console.log("Data", this.cards);
     })
       
+  }
+
+  emptyCards(){
+    this.cards = [];
   }
 
 }
