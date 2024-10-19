@@ -48,9 +48,6 @@ mat-card-subtitle{
     padding: 10px;
 }
 
-
-
-
 #cardContainer img {
     width: 100%;
     height: auto; 
@@ -127,8 +124,31 @@ mat-card-subtitle{
 
   .container-cards ul li{
    margin-top: 50px;
+   z-index: 0;
   }
+
+
+   .container-cards ul li:hover{
+ width: 80%;
+    transition: 0.5s;
+   }
   
+  .buttonList{
+    display: block;
+    background-color: transparent;
+    width: 100px;
+   height: 50px;
+  margin: 20px auto;
+  border: none;
+   }
+
+   .buttonList:hover{
+    width: 120px;
+    height: 70px;
+    font-size: larger;
+    transition: 0.5s;
+   }
+
 /* Media query */
 @media (max-width: 600px) {
 
@@ -144,6 +164,7 @@ mat-card-subtitle{
    #cardContainer .headerCard {
     display: none;
    }
+
 
     
 }
