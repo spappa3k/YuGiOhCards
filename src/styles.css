@@ -129,8 +129,8 @@ mat-card-subtitle{
 
 
    .container-cards ul li:hover{
- width: 80%;
-    transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.8s;
    }
   
   .buttonList{
