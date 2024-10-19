@@ -13,6 +13,7 @@ nameSearched?:string
 dataSearched?:CardData
 cards?:Card[]
 cardsMultiplier:number=0
+numberListened:number=10
 
 constructor(private route:ActivatedRoute, private ys:YugiohService){
 
@@ -36,7 +37,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
-      this.dataSearched.data=this.dataSearched.data.slice((10*this.cardsMultiplier), (this.cardsMultiplier+1)*10);
+      this.dataSearched.data=this.dataSearched.data.slice((this.numberListened*this.cardsMultiplier), (this.cardsMultiplier+1)*this.numberListened);  // numberListened=10
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
       console.log("Data", this.cards);
