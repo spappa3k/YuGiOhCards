@@ -122,8 +122,7 @@ mat-card-subtitle{
   
   /* Card List */
   .container-cards{
-    width: 90%;
-    margin: 0 auto;
+    margin: 0 100px;
   }
 
   .container-cards ul li{

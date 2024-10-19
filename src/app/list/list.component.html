@@ -1,12 +1,12 @@
 <div *ngIf="dataSearched">
   <div class="container-cards">
-    <ul style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap">
+    <ul style="display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap;  justify-content: center;">
       <li *ngFor="let card of cards" style="list-style-type: none; ">
         <mat-card-header>
-          <img mat-card-image [src]="card.card_images[0].image_url_small" alt="Card Image" style="min-width: 300px; max-height: 438px;">
+          <img mat-card-image [src]="card.card_images[0].image_url" alt="Card Image" style="min-width: 300px; max-height: 438px;">
         </mat-card-header>
       </li>
     </ul>
   </div>
-  <button type="button" (click)="doCallToSearch();" style="width: 600px;">AVANTI</button>
+  <button type="button" (click)="doCallToSearch();" class="buttonList" style="width: 600px;">AVANTI</button>
 </div>
