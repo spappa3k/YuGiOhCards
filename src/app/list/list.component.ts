@@ -14,6 +14,7 @@ dataSearched?:CardData
 cards?:Card[]
 cardsMultiplier:number=0
 numberListened:number=10
+numberOfObjectsInCall:number=0
 
 constructor(private route:ActivatedRoute, private ys:YugiohService){
 
@@ -26,7 +27,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
     this.nameSearched = params.get('searchedName') ?? ''; /* Usa il valore di default se e' null*/
     this.cards = [];
     this.cardsMultiplier=0;
-
+this.numberOfObjectsInCall=0;
      this.doCallToSearch();
       }
 
@@ -37,6 +38,7 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
+      this.numberOfObjectsInCall=data.data.length;
       this.dataSearched.data=this.dataSearched.data.slice((this.numberListened*this.cardsMultiplier), (this.cardsMultiplier+1)*this.numberListened);  // numberListened=10
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
