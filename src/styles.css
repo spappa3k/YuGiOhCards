@@ -127,7 +127,6 @@ mat-card-subtitle{
    z-index: 0;
   }
 
-
    .container-cards ul li:hover{
     transform: scale(1.1);
     transition: 0.8s;
