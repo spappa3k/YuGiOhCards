@@ -16,9 +16,7 @@ cardsMultiplier:number=0
 numberListened:number=20
 numberOfObjectsInCall:number=0
 
-constructor(private route:ActivatedRoute, private ys:YugiohService){
-
-}
+constructor(private route:ActivatedRoute, private ys:YugiohService){}
 
 
   ngOnInit(): void {
@@ -30,12 +28,10 @@ constructor(private route:ActivatedRoute, private ys:YugiohService){
 this.numberOfObjectsInCall=0;
      this.doCallToSearch();
       }
-
     )
   }
 
   doCallToSearch(){
-
     this.ys.findCardByName(this.nameSearched!).subscribe(data=>{
       this.dataSearched=data;
       this.numberOfObjectsInCall=data.data.length;
