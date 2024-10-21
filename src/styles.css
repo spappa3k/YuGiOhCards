@@ -82,39 +82,39 @@ mat-card-subtitle{
 
 /* Colori per tipo */
 .type-effectMonster {
-    color: #ffcc00;
+    color: #ffcc00 !important;
   }
   
   .type-normalMonster {
-    color: #ffff99;
+    color: #ffff99 !important;
   }
   
   .type-fusionMonster {
-    color: #800080;
+    color: #800080 !important;
   }
   
   .type-linkMonster {
-    color: #0000ff;
+    color: #0000ff !important;
   }
   
   .type-xyzMonster {
-    color: #000000;
+    color: #000000 !important;
   }
   
   .type-ritualMonster {
-    color: #00ccff;
+    color: #00ccff !important;
   }
   
   .type-spell {
-    color: #00a000;
+    color: #00a000 !important;
   }
   
   .type-trap {
-    color: #ff33cc;
+    color: #ff33cc !important;
   }
   
   .type-white {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   
   /* Card List */
