@@ -82,7 +82,7 @@ mat-card-subtitle{
 
 /* Colori per tipo */
 .type-effectMonster {
-    color: #ffcc00 !important;
+    color: #ffcc00;
   }
   
   .type-normalMonster {
