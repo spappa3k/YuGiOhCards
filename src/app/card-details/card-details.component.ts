@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { YugiohService } from '../yugioh.service';
 import { CardData } from '../../models/models';
 import { MaterialModule } from '../material/material.module';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-card-details',
@@ -11,10 +12,12 @@ import { MaterialModule } from '../material/material.module';
 export class CardDetailsComponent implements OnInit{
 dataCard?:CardData
 
-  constructor(private ys:YugiohService){}
+  constructor(private ys:YugiohService, private route:ActivatedRoute){}
 
 ngOnInit(): void {
-    this.ys.findCardById(68464358).subscribe({   // 68464358 rokket tracer
+const id=Number(this.route.snapshot.paramMap.get('id'));
+
+    this.ys.findCardById(id).subscribe({   // 68464358 rokket tracer
      next: (data)=>{
       this.dataCard=data;
    },

@@ -6,10 +6,13 @@ import { CardDetailsComponent } from './card-details/card-details.component';
 
 const routes: Routes = [
   {
-    path: "", component:CardDetailsComponent
+    path: "", component:HomeComponent
   },
   {
     path:"list/:searchedName", component: ListComponent
+  },
+  {
+    path:"card/:id", component:CardDetailsComponent
   }
 ];
 
