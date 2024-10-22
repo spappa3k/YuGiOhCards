@@ -147,6 +147,27 @@ mat-card-subtitle{
     font-size: larger;
     transition: 0.5s;
    }
+ 
+/* Show More  */
+.showMore p{
+  text-align: center;
+}
+
+/* hover img */
+.column1 img:hover{
+transform:scale(1.18);
+margin-left: 100px;
+transition: 1s;
+z-index: 100;
+}
+
+.column1 img:not(:hover) {
+  transform: scale(1);           
+  margin-left: 0;                
+  z-index: 1;         
+  transition: 1s; 
+}
+
 
 /* Media query */
 @media (max-width: 600px) {
@@ -164,6 +185,9 @@ mat-card-subtitle{
     display: none;
    }
 
-
+   .column1 img:hover{
+    transform:scale(1);
+    margin-left: 0;
+    }
     
 }
