@@ -11,6 +11,7 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 })
 export class CardDetailsComponent implements OnInit{
 dataCard?:CardData
+showMore:boolean=false;
 
   constructor(private ys:YugiohService, private route:ActivatedRoute){}
 
@@ -56,6 +57,10 @@ getType(type: string): string {
         default:
       return 'type-white';  // Nessuna classe se il tipo non corrisponde
   }
+}
+
+viewMore(){
+this.showMore= !this.showMore;
 }
 
 }

@@ -32,8 +32,19 @@
       <p>{{ dataCard.data[0].desc }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>View More</button>
+      <ng-container *ngIf="!showMore">
+      <button mat-button (click)="viewMore()">Show More</button>
+    </ng-container>
+    <ng-container *ngIf="showMore">
+      <button mat-button (click)="viewMore()">Show Less</button>
+    </ng-container>
     </mat-card-actions>
+    <mat-card-content *ngIf="showMore" class="showMore">
+    <a [href]="dataCard.data[0].ygoprodeck_url" target="_blank"><p>YugiPro Link </p></a>
+      <p>Amazon Price: {{dataCard.data[0].card_prices[0].amazon_price}} $</p>
+      <p>CardMarket Price: {{dataCard.data[0].card_prices[0].cardmarket_price}} $</p>
+      <p>Ebay Price: {{dataCard.data[0].card_prices[0].ebay_price}} $</p>
+    </mat-card-content>
 </div>
 </div>
   </mat-card>
