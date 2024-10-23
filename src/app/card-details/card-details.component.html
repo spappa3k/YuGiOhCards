@@ -11,10 +11,10 @@
 </div>
 <div class="column2">
   <div class="tipo" *ngIf="dataCard.data[0].atk">
-    <p>Attribute: {{dataCard.data[0].attribute}}</p>
+    <p>{{dataCard.data[0].attribute}}</p>
     <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>Level: {{dataCard.data[0].level}}</p>
-    <p style="display: block;">{{dataCard.data[0].typeline}}</p>
+    <p>{{dataCard.data[0].typeline}}</p>
   </ng-container>
   <ng-container *ngIf="dataCard.data[0].type === 'Link Monster'">
   <p>LINK - {{dataCard.data[0].linkval}}</p>
