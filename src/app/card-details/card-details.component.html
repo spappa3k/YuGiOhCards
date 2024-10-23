@@ -14,6 +14,7 @@
     <p>Attribute: {{dataCard.data[0].attribute}}</p>
     <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>Level: {{dataCard.data[0].level}}</p>
+    <p style="display: block;">{{dataCard.data[0].typeline}}</p>
   </ng-container>
   <ng-container *ngIf="dataCard.data[0].type === 'Link Monster'">
   <p>LINK - {{dataCard.data[0].linkval}}</p>
@@ -23,7 +24,6 @@
     <p>ATK: {{dataCard.data[0].atk}}</p>
     <ng-container *ngIf="dataCard.data[0].type !== 'Link Monster'">
     <p>DEF: {{dataCard.data[0].def}}</p>
-    <p>{{dataCard.data[0].typeline}}</p>
   </ng-container>
   </div>
   <div class="race" *ngIf="!dataCard.data[0].atk">
