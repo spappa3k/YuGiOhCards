@@ -30,7 +30,15 @@ ul{
     align-items: center;      
     padding-top: 5px;            
     padding-bottom: 10px;
+    position: relative;
 }
+
+.headerCard button{
+  position: absolute;
+  left: 80%;
+  top:10px;
+}
+
 
 mat-card-subtitle{
     text-align: center;
