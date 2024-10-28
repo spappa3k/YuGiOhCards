@@ -40,8 +40,8 @@ ul{
   top: 20px;
 }
 
-.addToFavoritesMobile{
-  display: none;
+.addToFavoritesMobile {
+display: none;
 }
 
 
@@ -205,6 +205,10 @@ z-index: 100;
     }
 
     .addToFavoritesMobile{
-      display: block;
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+      width: 50%; 
+      margin: 20px auto;
     }
 }
