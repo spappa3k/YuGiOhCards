@@ -8,6 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class YugiohService {
   searchedList?:CardData[]
+  favorites?:CardData[]
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
@@ -19,6 +20,10 @@ return this.http.get<CardData>(this.apiUrl+'?id='+id)
 
 findCardByName(name:string):Observable<CardData>{
   return this.http.get<CardData>(this.apiUrl+'?fname='+name)
+  }
+
+  addToFavorites(){
+    
   }
 /*
 https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/

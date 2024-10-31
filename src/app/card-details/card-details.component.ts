@@ -12,11 +12,13 @@ import { ActivatedRoute, Route, Router } from '@angular/router';
 export class CardDetailsComponent implements OnInit{
 dataCard?:CardData
 showMore:boolean=false;
+idCard?:number
 
   constructor(private ys:YugiohService, private route:ActivatedRoute){}
 
 ngOnInit(): void {
 const id=Number(this.route.snapshot.paramMap.get('id'));
+this.idCard=id; //  per l aggiunta ai preferiti
 
     this.ys.findCardById(id).subscribe({   // 68464358 rokket tracer
      next: (data)=>{
@@ -61,6 +63,11 @@ getType(type: string): string {
 
 viewMore(){
 this.showMore= !this.showMore;
+}
+
+addToFav(){
+  this.idCard=this.dataCard?.data.
+  this.ys.addToFavorites()
 }
 
 }
