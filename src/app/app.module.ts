@@ -10,6 +10,7 @@ import { CardDetailsComponent } from './card-details/card-details.component';
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     CardDetailsComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    FavoritesComponent
   ],
   imports: [
     BrowserModule,
