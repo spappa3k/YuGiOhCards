@@ -16,5 +16,4 @@ export class AppComponent {
 
 constructor(private ys:YugiohService){}
 
-
 }
