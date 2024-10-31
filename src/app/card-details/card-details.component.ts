@@ -66,8 +66,9 @@ this.showMore= !this.showMore;
 }
 
 addToFav(){
-  this.idCard=this.dataCard?.data.
-  this.ys.addToFavorites()
+  console.log("ci passa");
+  this.ys.addToFavorites(this.idCard!);
+  
 }
 
 }

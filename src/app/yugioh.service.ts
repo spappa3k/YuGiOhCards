@@ -22,8 +22,8 @@ findCardByName(name:string):Observable<CardData>{
   return this.http.get<CardData>(this.apiUrl+'?fname='+name)
   }
 
-  addToFavorites(){
-    
+  addToFavorites(id:number){
+console.log("id: ",id);
   }
 /*
 https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/
