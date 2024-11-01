@@ -38,7 +38,6 @@ this.numberOfObjectsInCall=0;
       this.dataSearched.data=this.dataSearched.data.slice((this.numberListened*this.cardsMultiplier), (this.cardsMultiplier+1)*this.numberListened);  // numberListened=20
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
-      console.log("Data", this.cards);
     })
       
   }
