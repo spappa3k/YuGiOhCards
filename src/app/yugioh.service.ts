@@ -27,7 +27,7 @@ this.findCardById(id).subscribe(
   data=>{
     const datataken=data;
     console.log("datataken:",datataken);
-this.favorites?.push(datataken);
+this.favorites?.push(datataken.data);
 
   }
 )
