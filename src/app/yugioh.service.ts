@@ -23,7 +23,16 @@ findCardByName(name:string):Observable<CardData>{
   }
 
   addToFavorites(id:number){
-console.log("id: ",id);
+this.findCardById(id).subscribe(
+  data=>{
+    const datataken=data;
+    console.log("datataken:",datataken);
+this.favorites?.push(datataken);
+
+  }
+)
+
+
   }
 /*
 https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/
