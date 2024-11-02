@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class YugiohService {
   searchedList?:CardData[]
-  favorites?:CardData[]
+  favorites:CardData[]=[]
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
@@ -26,9 +26,9 @@ findCardByName(name:string):Observable<CardData>{
 this.findCardById(id).subscribe(
   data=>{
     const datataken=data;
-    console.log("datataken:",datataken);
-this.favorites?.push(datataken);
-
+    
+this.favorites.push(datataken);
+console.log("favorites:",this.favorites);
   }
 )
 
