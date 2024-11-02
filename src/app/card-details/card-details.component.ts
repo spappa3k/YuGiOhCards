@@ -67,7 +67,7 @@ this.showMore= !this.showMore;
 
 addToFav(){
   const existingCard=this.ys.favorites.find(card=>{
-card.data[0].id==this.idCard;
+card.data[0].id===this.idCard;
 console.log("existingCard:"+existingCard);
 if(!existingCard){
   this.ys.addToFavorites(this.idCard!);
