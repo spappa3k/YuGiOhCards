@@ -1,1 +1,12 @@
-<p>favorites works!</p>
+
+<div *ngIf="dataSearched">
+    <div class="container-cards">
+      <ul style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;  justify-content: center;">
+        <li *ngFor="let card of cards" style="list-style-type: none;" [routerLink]="['/card', card.data[0].id]">
+          <mat-card-header>
+            <img mat-card-image [src]="card.data[0].card_images[0].image_url" alt="Card Image" style="min-width: 300px; max-height: 438px;">
+          </mat-card-header>
+        </li>
+      </ul>
+    </div>
+  </div>
