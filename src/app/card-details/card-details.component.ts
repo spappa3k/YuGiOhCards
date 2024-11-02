@@ -13,6 +13,7 @@ export class CardDetailsComponent implements OnInit{
 dataCard?:CardData
 showMore:boolean=false;
 idCard?:number
+existingCard?:CardData
 
   constructor(private ys:YugiohService, private route:ActivatedRoute){}
 
@@ -28,6 +29,10 @@ this.idCard=id; //  per l aggiunta ai preferiti
     console.log(err)
   }
 });
+
+  this.existingCard=this.ys.favorites.find(card=>{
+  return card.data[0].id===this.idCard;
+    })
 }
 
 getType(type: string): string {
@@ -66,14 +71,11 @@ this.showMore= !this.showMore;
 }
 
 addToFav(){
-  const existingCard=this.ys.favorites.find(card=>{
-card.data[0].id===this.idCard;
-console.log("existingCard:"+existingCard);
-if(!existingCard){
-  this.ys.addToFavorites(this.idCard!);
-  }
-  })
- 
+
+
+  if(!this.existingCard){
+    this.ys.addToFavorites(this.idCard!);
+    }
 }
 
 }
