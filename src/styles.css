@@ -40,9 +40,6 @@ ul{
   top: 20px;
 }
 
-.addToFavoritesMobile {
-display: none;
-}
 
 
 mat-card-subtitle{
@@ -209,4 +206,6 @@ z-index: 100;
       width: 50%; 
       margin: 20px auto;
     }
+
+
 }
