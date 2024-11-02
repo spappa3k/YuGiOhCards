@@ -6,6 +6,9 @@
       <ng-container *ngIf="showAddToFavorites">
       <button type="button" class="addToFavoritesMobile" (click)="addToFav()">Add To favorites</button>
     </ng-container>
+    <ng-container *ngIf="!showAddToFavorites">
+<button class="addToFavoritesMobile">Already in your favorites</button>
+    </ng-container>
     </mat-card-header>
 </div>
 <div class="columnsContainer">

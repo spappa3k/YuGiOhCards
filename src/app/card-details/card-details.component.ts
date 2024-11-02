@@ -36,7 +36,9 @@ this.idCard=id; //  per l aggiunta ai preferiti
     })
 
     if(this.existingCard==null){
-      this.showAddToFavorites=false;
+      this.showAddToFavorites=true;
+      }else{
+        this.showAddToFavorites=false;
       }
   }
 
@@ -80,6 +82,7 @@ addToFav(){
 
   if(this.existingCard==null){
     this.ys.addToFavorites(this.idCard!);
+    this.showAddToFavorites=false;
     }
 }
 
