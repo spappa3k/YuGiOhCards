@@ -14,6 +14,7 @@ dataCard?:CardData
 showMore:boolean=false;
 idCard?:number
 existingCard?:CardData
+showAddToFavorites:boolean=true;
 
   constructor(private ys:YugiohService, private route:ActivatedRoute){}
 
@@ -33,7 +34,12 @@ this.idCard=id; //  per l aggiunta ai preferiti
   this.existingCard=this.ys.favorites.find(card=>{
   return card.data[0].id===this.idCard;
     })
-}
+
+    if(this.existingCard==null){
+      this.showAddToFavorites=false;
+      }
+  }
+
 
 getType(type: string): string {
   switch (type) {
@@ -72,7 +78,7 @@ this.showMore= !this.showMore;
 
 addToFav(){
 
-  if(this.existingCard!=null){
+  if(this.existingCard==null){
     this.ys.addToFavorites(this.idCard!);
     }
 }
