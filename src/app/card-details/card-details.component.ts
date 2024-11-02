@@ -72,8 +72,7 @@ this.showMore= !this.showMore;
 
 addToFav(){
 
-
-  if(!this.existingCard){
+  if(this.existingCard!=null){
     this.ys.addToFavorites(this.idCard!);
     }
 }
