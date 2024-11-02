@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { CardDetailsComponent } from './card-details/card-details.component';
+import { FavoritesComponent } from './favorites/favorites.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path:"card/:id", component:CardDetailsComponent
+  },
+  {
+    path:"favorites", component:FavoritesComponent
   }
 ];
 

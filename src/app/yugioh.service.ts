@@ -26,9 +26,15 @@ findCardByName(name:string):Observable<CardData>{
 this.findCardById(id).subscribe(
   data=>{
     const datataken=data;
-    
-this.favorites.push(datataken);
-console.log("favorites:",this.favorites);
+  
+    this.favorites.find(card=>{
+    const existingCard=card.data[0].id===id;
+   
+    if(!existingCard)
+      this.favorites.push(datataken);
+      console.log("favorites:",this.favorites);
+    })
+
   }
 )
 

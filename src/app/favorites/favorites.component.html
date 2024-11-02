@@ -1,5 +1,4 @@
-
-<div *ngIf="dataSearched">
+<p>Favorites</p>
     <div class="container-cards">
       <ul style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;  justify-content: center;">
         <li *ngFor="let card of cards" style="list-style-type: none;" [routerLink]="['/card', card.data[0].id]">
@@ -9,4 +8,4 @@
         </li>
       </ul>
     </div>
-  </div>
+
