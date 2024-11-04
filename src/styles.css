@@ -159,7 +159,7 @@ mat-card-subtitle{
  
    /* add/remove favorites */
    .addToFavorites{
-    background: linear-gradient(90deg, #d30000, #ff9f8c);
+    background: linear-gradient(90deg, #d30000, #ff7d63);
     color: #ffffff;
     width: 130px;
     font-weight: bold;
@@ -173,7 +173,7 @@ mat-card-subtitle{
   }
 
   .removeFromFavorites{
-    background: linear-gradient(90deg, #000000, #aeaeae);
+    background: linear-gradient(90deg, #000000, #797979);
     color: #ffffff;
     width: 130px;
     font-weight: bold;

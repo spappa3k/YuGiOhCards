@@ -79,11 +79,9 @@ this.showMore= !this.showMore;
 }
 
 addToFav(){
-
-  if(this.existingCard==null){
-    this.ys.addToFavorites(this.idCard!);
     this.showAddToFavorites=false;
-    }
+    this.ys.addToFavorites(this.idCard!);
+
 }
 
 removeFromFav(){
