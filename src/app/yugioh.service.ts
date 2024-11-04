@@ -31,9 +31,17 @@ this.findCardById(id).subscribe(
       console.log("favorites:",this.favorites); 
   }
 )
-
-
   }
+
+  
+removeFromFavorites(id:number){  /* Trova l index della carta con l id  da rimuovere*/
+const found = this.favorites.findIndex(card=>{
+  card.data[0].id===id
+})
+this.favorites.splice(found, 1)
+}
+
+}
+
 /*
 https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/
-}

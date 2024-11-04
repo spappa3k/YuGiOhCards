@@ -86,5 +86,9 @@ addToFav(){
     }
 }
 
+removeFromFav(){
+  this.ys.removeFromFavorites(this.idCard!);
+}
+
 }
 
