@@ -4,10 +4,10 @@
       <mat-card-title>{{ dataCard.data[0].name }}</mat-card-title>
       <mat-card-subtitle [ngClass]="getType(dataCard.data[0].type)">{{ dataCard.data[0].type }}</mat-card-subtitle>
       <ng-container *ngIf="showAddToFavorites">
-      <button type="button" class="addToFavoritesMobile" (click)="addToFav()">Add To favorites</button>
+      <button type="button" class="addToFavorites" (click)="addToFav()"> ❤ Add To favorites</button>
     </ng-container>
     <ng-container *ngIf="!showAddToFavorites">
-<button type="button" class="addToFavoritesMobile" style="color: rgb(207, 43, 43);" (click)="removeFromFav()" >Remove from favorites</button>
+<button type="button" class="removeFromFavorites" (click)="removeFromFav()">✘ Remove from favorites</button>
     </ng-container>
     </mat-card-header>
 </div>
