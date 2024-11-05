@@ -225,14 +225,12 @@ z-index: 100;
     }
 
     .headerCard button{
-    float: left;
-    font-size: 0.6em;
-    width:90px;
-    top:48px;
-    left: 50px;
+width: 40px;
     }
 
-    .textFav
+    .textFav{
+      display:none;
+    }
 
 
 
