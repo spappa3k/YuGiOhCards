@@ -156,7 +156,13 @@ mat-card-subtitle{
     font-size: larger;
     transition: 0.5s;
    }
- 
+
+ .desc{
+font-family: yugiohItalic;
+font-size: 1.2em;
+ }
+
+
    /* add/remove favorites */
    .addToFavorites{
     background: linear-gradient(90deg, #d30000, #ff7d63);
@@ -205,6 +211,14 @@ z-index: 100;
   z-index: 1;         
   transition: 1s; 
 }
+
+
+/* FONTS */
+@font-face {
+  font-family: yugiohItalic;
+  src: url('../src/assets/fonts/yugiohItalic.ttf');  /* src\assets\fonts\yugiohItalic.ttf */
+}
+
 
 
 /* Media query */
