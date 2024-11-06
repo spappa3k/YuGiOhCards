@@ -8,6 +8,7 @@ html, body {
 body { 
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
+
 }
 
 ul{
@@ -31,6 +32,7 @@ ul{
     padding-top: 5px;            
     padding-bottom: 10px;
     position: relative;
+
 }
 
 .headerCard button{
@@ -40,10 +42,17 @@ ul{
   top: 20px;
 }
 
+.nameDet{
+  font-family: yugiohMatrix2;
+  font-size: 1.56em;
+}
+
 
 
 mat-card-subtitle{
+  position: relative;
     text-align: center;
+    bottom: 10px;
 }
 
 
@@ -61,6 +70,8 @@ mat-card-subtitle{
 #cardContainer img {
     width: 100%;
     height: auto; 
+    position: relative;
+    bottom:15px;
 }
 
 .AtkDef, .tipo, .race{
@@ -68,6 +79,8 @@ mat-card-subtitle{
     flex-direction: row;
     gap: 10px;
     margin-left: 16px;
+    font-family: yugiohMatrix2;
+    font-size: 1.5em;
 }
 
 .tipo, .race{
@@ -159,7 +172,7 @@ mat-card-subtitle{
 
  .desc{
 font-family: yugiohItalic;
-font-size: 1.2em;
+font-size: 1.1em;
  }
 
 
@@ -217,6 +230,11 @@ z-index: 100;
 @font-face {
   font-family: yugiohItalic;
   src: url('../src/assets/fonts/yugiohItalic.ttf');  /* src\assets\fonts\yugiohItalic.ttf */
+}
+
+@font-face {
+  font-family: yugiohMatrix2;
+  src: url('../src/assets/fonts/yugiohMatrix2.ttf');  /* src\assets\fonts\yugiohItalic.ttf */
 }
 
 

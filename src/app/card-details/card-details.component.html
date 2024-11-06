@@ -1,8 +1,8 @@
 <mat-card *ngIf="dataCard" id="cardContainer">
    <div class="headerCard">
     <mat-card-header>
-      <mat-card-title>{{ dataCard.data[0].name }}</mat-card-title>
-      <mat-card-subtitle [ngClass]="getType(dataCard.data[0].type)">{{ dataCard.data[0].type }}</mat-card-subtitle>
+      <mat-card-title><p class="nameDet">{{ dataCard.data[0].name }}</p></mat-card-title>
+      <mat-card-subtitle [ngClass]="getType(dataCard.data[0].type)"><p class="nameDet">{{ dataCard.data[0].type }}</p></mat-card-subtitle>
       <ng-container *ngIf="showAddToFavorites">
         <button type="button" class="addToFavorites responsiveButton" (click)="addToFav()">❤ <span class="textFav">Add To favorites</span></button>
       </ng-container>
