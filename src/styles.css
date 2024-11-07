@@ -20,8 +20,33 @@ body {
 /*  Home   */
 
 #videoHome{
-  transform: translate(-50%, 20%);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 10%);
 }
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 238, 0, 0.8), 0 0 20px rgba(255, 238, 0, 0.6), 0 0 30px rgba(255, 238, 0, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 238, 0, 1), 0 0 30px rgba(255, 238, 0, 0.8), 0 0 40px rgba(255, 238, 0, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 238, 0, 0.8), 0 0 20px rgba(255, 238, 0, 0.6), 0 0 30px rgba(255, 238, 0, 0.4);
+  }
+}
+
+h1 {
+  color: rgb(255, 238, 0);
+  text-align: center;
+  padding-top: 50px;
+  font-family: yugiohMatrix2 !important;
+  font-size: 8.5rem !important;
+  animation: glow 2s infinite alternate;
+}
+
+
 
 ul{
   padding: 0;
