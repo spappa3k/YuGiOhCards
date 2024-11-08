@@ -9,12 +9,12 @@
           </mat-menu>
         <span>ShowCase Salvatore Pappalardo
         </span>
-        <span class="example-spacer">oooo</span>
+        <span class="example-spacer"></span>
         <button mat-icon-button type="button" [routerLink]="['/favorites']" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
           <mat-icon>favorite</mat-icon>
         </button>
         <mat-form-field class="searchField">
-          <input matInput [(ngModel)]="searchValue" type="search" maxlength="30">
+          <input matInput [(ngModel)]="searchValue" type="search" maxlength="30" class="inputSearch">
           <button matSuffix mat-icon-button aria-label="Search" (click)="onSearch()">
             <mat-icon>search</mat-icon>
           </button>

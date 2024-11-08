@@ -137,6 +137,10 @@ mat-card-subtitle{
     width: 320px;
 }
 
+.inputSearch{
+  background-color: transparent;
+}
+
 /* Cuore */
   .favorite-icon {
     margin-left: auto;
