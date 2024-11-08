@@ -13,8 +13,8 @@
         <button mat-icon-button type="button" [routerLink]="['/favorites']" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
           <mat-icon>favorite</mat-icon>
         </button>
-        <mat-form-field class="searchField">
-          <input matInput [(ngModel)]="searchValue" type="search" maxlength="30" class="inputSearch">
+        <mat-form-field class="searchField transparent-search-field">
+          <input matInput [(ngModel)]="searchValue" type="search" maxlength="30">
           <button matSuffix mat-icon-button aria-label="Search" (click)="onSearch()">
             <mat-icon>search</mat-icon>
           </button>
