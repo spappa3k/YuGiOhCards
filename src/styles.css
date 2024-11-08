@@ -46,7 +46,10 @@ h1 {
   animation: glow 2s infinite alternate;
 }
 
-
+#headerTotal{
+  background-color:transparent;
+  color: yellow;
+}
 
 ul{
   padding: 0;
