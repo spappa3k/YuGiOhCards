@@ -135,7 +135,9 @@ mat-card-subtitle{
     transform: translateX(-50%); /* Sposta l'elemento indietro della sua larghezza */
     top:5px;
     width: 320px;
+    color:rgb(209, 115, 0)
 }
+
 
 /* Cuore */
   .favorite-icon {
