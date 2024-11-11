@@ -12,7 +12,7 @@ export class FavoritesComponent implements OnInit{
 cards?:CardData[]
 
 
-constructor(private route:ActivatedRoute, private ys:YugiohService){}
+constructor(private route:ActivatedRoute, public ys:YugiohService){}
 
 
   ngOnInit(): void {
