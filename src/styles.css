@@ -22,7 +22,7 @@ body {
 #videoHome{
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 10%);
+  transform: translate(-50%, 13%);
 }
 
 @keyframes glow {
@@ -333,7 +333,6 @@ width: 40px;
     }
 
     .titleHome {
-      padding-top: 50px;  
       color: rgb(205, 14, 14);  
       line-height: 1.2;
   }
