@@ -277,13 +277,16 @@ z-index: 100;
 
 .favTitle{
 margin-top: 40px;
+color: rgb(255, 238, 0);  
+font-family: yugiohMatrix2;
+font-size: 1.56em;
 }
 
 .favTitle p{
   font-family: yugiohMatrix2;
   font-size: 3em;
  text-align: center;
- color: #9a440e;
+
 }
 
 
