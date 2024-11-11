@@ -37,8 +37,8 @@ body {
   }
 }
 
-h1 {
-  color: rgb(255, 238, 0);
+.titleHome {
+  color: rgb(205, 14, 14);  
   text-align: center;
   padding-top: 50px;
   font-family: yugiohMatrix2 !important;
@@ -324,10 +324,12 @@ width: 40px;
       display: none;
     }
 
-    h1{
-      line-height: 1000px;
-    }
-
+    .titleHome {
+      padding-top: 50px;  
+      color: rgb(205, 14, 14);  
+      line-height: 1.2;
+  }
+  
 
 
 }
