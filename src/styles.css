@@ -38,14 +38,14 @@ body {
 }
 
 .titleHome {
-  color: rgb(205, 14, 14);  
+  color: rgba(205, 14, 14, 0.816);  
   text-align: center;
   padding-top: 50px;
   font-family: yugiohMatrix2 !important;
   font-size: 8.5rem !important;
   animation: glow 2s infinite alternate;
 }
-
+/* Header */ 
 #headerTotal{
   background-color:transparent;
   color: yellow;
@@ -56,6 +56,9 @@ ul{
   margin: 0;
 }
 
+
+
+/*  Card  */
 #cardContainer {
     margin: 20px auto;
     width: 100%;
@@ -135,7 +138,7 @@ mat-card-subtitle{
     transform: translateX(-50%); /* Sposta l'elemento indietro della sua larghezza */
     top:5px;
     width: 320px;
-    color:rgb(209, 115, 0)
+    color: rgba(205, 14, 14, 0.67);  
 }
 
 
@@ -328,6 +331,10 @@ width: 40px;
       padding-top: 50px;  
       color: rgb(205, 14, 14);  
       line-height: 1.2;
+  }
+
+  .showCase{
+    display: none;
   }
   
 

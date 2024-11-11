@@ -7,14 +7,14 @@
             <button mat-menu-item>Item 1</button>
             <button mat-menu-item>Item 2</button>
           </mat-menu>
-        <span>ShowCase Salvatore Pappalardo
+        <span class="showCase">ShowCase Salvatore Pappalardo
         </span>
         <span class="example-spacer"></span>
         <button mat-icon-button type="button" [routerLink]="['/favorites']" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
           <mat-icon>favorite</mat-icon>
         </button>
         <mat-form-field class="searchField" color="accent">
-          <input matInput [(ngModel)]="searchValue" type="search" maxlength="27">
+          <input matInput [(ngModel)]="searchValue" type="search" maxlength="27" placeholder="Search your card here..">
           <button matSuffix mat-icon-button aria-label="Search" (click)="onSearch()">
             <mat-icon>search</mat-icon>
           </button>
