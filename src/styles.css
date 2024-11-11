@@ -320,6 +320,14 @@ width: 40px;
       display:none;
     }
 
+    #videoHome{
+      display: none;
+    }
+
+    h1{
+      line-height: 1000px;
+    }
+
 
 
 }
