@@ -17,8 +17,6 @@ constructor(private route:ActivatedRoute, public ys:YugiohService){}
 
   ngOnInit(): void {
     this.cards = this.ys.favorites;
-      }
-
-      
+        }
   }
 
