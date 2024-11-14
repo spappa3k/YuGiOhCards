@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
     CardDetailsComponent,
     ListComponent,
     HomeComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

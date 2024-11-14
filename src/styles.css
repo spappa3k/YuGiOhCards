@@ -286,9 +286,20 @@ font-size: 1.56em;
   font-family: yugiohMatrix2;
   font-size: 3em;
  text-align: center;
-
 }
 
+.NofavTitle{
+  margin-top: 40px;
+  color: rgb(255, 238, 0);  
+  font-family: yugiohMatrix2;
+  font-size: 1.56em;
+  }
+  
+  .NofavTitle p{
+    font-family: yugiohMatrix2;
+    font-size: 2em;
+   text-align: center;
+  }
 
 /* FONTS */
 @font-face {
