@@ -301,6 +301,20 @@ font-size: 1.56em;
    text-align: center;
   }
 
+/* LOGIN */
+.login{
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login p{
+  font-size: 4em;
+  color: #ffcc00;
+}
+
 /* FONTS */
 @font-face {
   font-family: yugiohItalic;
