@@ -307,7 +307,7 @@ font-size: 1.56em;
   min-height: 100vh;
  position: absolute;
  z-index: 998;
- background-color: #0000ff;
+ background-color: #cdcdd157;
 }
 
 .login .loginShape{
