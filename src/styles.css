@@ -303,12 +303,11 @@ font-size: 1.56em;
 
 /* LOGIN */
 .login{
- width: 100%;
- height: auto;
- background-color: #0000ff;
+  width: 100%;
+  min-height: 100vh;
  position: absolute;
  z-index: 998;
-  
+ background-color: #0000ff;
 }
 
 .login .loginShape{
