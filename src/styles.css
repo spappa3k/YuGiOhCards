@@ -327,6 +327,16 @@ font-size: 1.56em;
   color: #ffcc00;
 }
 
+.loginShape .formShape{
+  width: 80%;
+  height: 80%;
+  border: #d30000 2px solid;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* FONTS */
 @font-face {
   font-family: yugiohItalic;
