@@ -340,18 +340,22 @@ font-size: 1.56em;
 .formShape form{
   display: flex;
   flex-direction: column;
-  gap:10px;
+  gap:20px;
   padding-top: 70px;
 }
 
-.formShape form input{
-  width: 60%;
-  margin: 0 auto;
+.formShape form label{
+  display: flex;
+  flex-direction: column;
+  gap:2px;
 }
 
 .formShape form input{
+  width: 100%;
   height: 30px;
+  margin: 0 auto;
 }
+
 .formShape form label{
   width: 60%;
   margin: 0 auto;
