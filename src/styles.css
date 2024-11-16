@@ -361,6 +361,12 @@ font-size: 1.56em;
   margin: 0 auto;
 }
 
+.formShape form button{
+  width: 100px;
+  height: 40px;
+  margin:25px auto;
+}
+
 /* FONTS */
 @font-face {
   font-family: yugiohItalic;
