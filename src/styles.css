@@ -337,6 +337,26 @@ font-size: 1.56em;
   transform: translate(-50%, -50%);
 }
 
+.formShape form{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  padding-top: 70px;
+}
+
+.formShape form input{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.formShape form input{
+  height: 30px;
+}
+.formShape form label{
+  width: 60%;
+  margin: 0 auto;
+}
+
 /* FONTS */
 @font-face {
   font-family: yugiohItalic;
