@@ -319,21 +319,7 @@ font-size: 1.56em;
   border: #000000 2px solid;
   width: 500px;
   height: 500px;
-  background: yellow; /* Colore iniziale */
-  animation: colorChange 5s infinite; /* Animazione ciclica */
-}
-
-/* Definizione dei keyframes */
-@keyframes colorChange {
-  0% {
-    background: rgb(224, 224, 141);
-  }
-  50% {
-    background: rgb(168, 56, 56); /* Aggiunge una transizione intermedia */
-  }
-  100% {
-    background: rgb(224, 224, 141);
-  }
+  background: rgb(255, 255, 255); /* Colore iniziale */
 }
 
 /* Contenitore principale */
@@ -364,7 +350,7 @@ font-size: 1.56em;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px; /* Angoli arrotondati */
+  border-radius: 15px; 
   width: 500px;
   height: 500px;
   background: rgba(255, 255, 255, 0.1);
@@ -390,7 +376,7 @@ font-size: 1.56em;
 .formShape form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   padding-top: 40px;
   align-items: center;
 }
@@ -430,7 +416,7 @@ font-size: 1.56em;
 .formShape form button {
   width: 100px;
   height: 40px;
-  margin: 25px auto;
+  margin: 35px auto;
   background-color: #0099ff;
   color: #ffffff;
   border: none;
