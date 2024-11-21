@@ -47,6 +47,7 @@ this.favorites.splice(found, 1)
 login(inputPassword:string): boolean{
   if(inputPassword=== this.password){
     this.token=this.generateToken();
+    localStorage.setItem('authToken',this.token);
     return true;
   }else{
     return false;
@@ -66,8 +67,6 @@ generateToken(){
 }
 
 
-
-}
 
 /*
 https://db.ygoprodeck.com/api/v7/cardinfo.php?fname=rokket*/
