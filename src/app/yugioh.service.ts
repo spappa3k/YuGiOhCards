@@ -9,6 +9,8 @@ import { HttpClient } from '@angular/common/http';
 export class YugiohService {
   searchedList?:CardData[]
   favorites:CardData[]=[]
+  password:string='IamYourPassword123'
+  token:string |null =null
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
