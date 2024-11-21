@@ -46,12 +46,25 @@ this.favorites.splice(found, 1)
 // LOGIN
 login(inputPassword:string): boolean{
   if(inputPassword=== this.password){
+    this.token=this.generateToken();
     return true;
   }else{
     return false;
   }
 
 }
+
+generateToken(){
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const tokenLength = 32; // Lunghezza del token
+    let token = '';
+    for (let i = 0; i < tokenLength; i++) {
+      token += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    return token;
+  }
+}
+
 
 
 }
