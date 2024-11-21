@@ -5,16 +5,16 @@
             <label for="username">Username
                 <input type="text" id="username" placeholder="Enter your Username" maxlength="20" formControlName="username" />
             </label>
-            <div class="errorSmall" *ngIf="Login.get('username')?.hasError('pattern')&&Login.get('username')?.touched">
-                <p>errore</p>
+            <div *ngIf="Login.get('username')?.hasError('pattern')&&Login.get('username')?.touched">
+                <p class="errorSmall">Insert a valid username</p>
             </div>
             
             
             <label for="password">Password
                 <input type="password" id="password" placeholder="Enter your Password"maxlength="27" formControlName="password"/>
             </label>
-            <div class="errorSmall" *ngIf="Login.get('password')?.invalid&&Login.get('password')?.touched">
-                <p>errore</p>
+            <div *ngIf="Login.get('password')?.invalid&&Login.get('password')?.touched">
+                <p class="errorSmall">Insert a valid password</p>
             </div>
             
             <button type="submit">Log In</button>
