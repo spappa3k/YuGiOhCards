@@ -5,7 +5,7 @@
            
            <div style="position: relative;"> <label for="username">Username
                 <input type="text" id="username" placeholder="Enter your Username" maxlength="20" formControlName="username" />
-                <ng-container *ngIf="Login.get('username')?.hasError('pattern')&&Login.get('username')?.touched">
+                <ng-container *ngIf="Login.get('username')?.hasError('pattern')&&Login.get('username')?.touched||Login.get('username')?.touched&&Login.get('username')?.invalid">
                     <span class="errorSmall">Insert a valid username</span>
                 </ng-container>
             </label>
@@ -15,12 +15,14 @@
         <div style="position: relative;"> 
             <label for="password">Password
                 <input type="password" id="password" placeholder="Enter your Password"maxlength="27" formControlName="password"/>
-                <ng-container *ngIf="Login.get('password')?.invalid&&Login.get('password')?.touched">
+                <ng-container *ngIf="Login.get('password')?.invalid&&Login.get('password')?.touched||Login.get('password')?.touched&&Login.get('password')?.invalid">
                     <span class="errorSmall">Insert a valid password</span>
                 </ng-container>
             </label>  
         </div> 
+        <div>
             <button type="submit">Log In</button>
+        </div>
         </form>
     </div>
 </div>
