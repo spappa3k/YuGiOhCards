@@ -16,7 +16,12 @@ constructor(private route:ActivatedRoute, public ys:YugiohService){}
 
 
   ngOnInit(): void {
-    this.cards = this.ys.favorites;
+    const savedArray = localStorage.getItem('favoritesArray'); // stringa da convertire in json
+    if (savedArray) {
+      this.cards = JSON.parse(savedArray);  // Converte la stringa JSON in un array
+    } else {
+      this.cards = [];
         }
   }
+}
 

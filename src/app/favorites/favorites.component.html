@@ -1,5 +1,5 @@
 <ng-container *ngIf="cards && cards.length">
-<div class="favTitle"><p>Favorites</p></div>
+<div class="favTitle"><p>Favourites</p></div>
     <div class="container-cards">
       <ul style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;  justify-content: center;">
         <li *ngFor="let card of cards" style="list-style-type: none;" [routerLink]="['/card', card.data[0].id]">

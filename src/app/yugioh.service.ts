@@ -15,7 +15,17 @@ export class YugiohService {
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) { 
+          // Recupera i dati salvati nel localStorage, se presenti
+      const savedFavorites = localStorage.getItem('favoritesArray');
+      if (savedFavorites) {
+        this.favorites = JSON.parse(savedFavorites); // Converte la stringa JSON in un array
+      } else {
+        this.favorites = []; // Inizializza come array vuoto
+      }
+    
+    
+  }
 
 findCardById(id:number):Observable<CardData>{
 return this.http.get<CardData>(this.apiUrl+'?id='+id)
@@ -31,6 +41,7 @@ this.findCardById(id).subscribe(
     const datataken=data;
 
       this.favorites.push(datataken);
+      localStorage.setItem('favoritesArray', JSON.stringify(this.favorites));
       console.log("favorites:",this.favorites); 
   }
 )
@@ -42,6 +53,7 @@ const found = this.favorites.findIndex(card=>{
   card.data[0].id===id
 })
 this.favorites.splice(found, 1)
+ localStorage.setItem('favoritesArray', JSON.stringify(this.favorites));
 }
 
 // LOGIN
