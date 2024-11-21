@@ -439,8 +439,8 @@ font-size: 1.56em;
 .errorSmall{
   font-size: 0.9em;
   color: #d30000;
-  position: relative;
-  top:10px;
+  position: absolute;
+  top:104px;
 }
 
 /* FONTS */
