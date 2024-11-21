@@ -10,7 +10,7 @@ export class YugiohService {
   searchedList?:CardData[]
   favorites:CardData[]=[]
   username:string='NicknameDemo'
-  password:string='IamYourPassword123'
+  password:string='IamYourPassword123'   
   token:string |null =null
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
@@ -51,6 +51,7 @@ login(inputUsername:string,inputPassword:string){
     this.token=this.generateToken();
     console.log(this.token)
     localStorage.setItem('authToken',this.token);
+    window.location.reload();
   }
 
 }

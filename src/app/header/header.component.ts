@@ -27,6 +27,11 @@ this.nameToSearch=this.searchValue;
 
 }
 
+logout(){
+  localStorage.removeItem('authToken');
+  window.location.reload();
+}
+
 }
   
 
