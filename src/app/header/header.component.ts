@@ -15,7 +15,7 @@ searchValue:string=''
 nameToSearch:string=''
 //dataList?:CardData[]
 
-constructor(private ys:YugiohService, private router:Router){}
+constructor(public ys:YugiohService, private router:Router){}
 
 toggleMenu(){
 this.showMenuOn=!this.showMenuOn;  /* Inverte il valore */
