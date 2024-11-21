@@ -20,9 +20,15 @@
                 </ng-container>
             </label>  
         </div> 
-        <div>
+        <div *ngIf="!Login.valid">
+            <button type="submit" style="background-color: rgb(96, 92, 92) !important; cursor:not-allowed;">Log In</button>
+        </div>
+        <div *ngIf="Login.valid">
             <button type="submit">Log In</button>
         </div>
+        <div *ngIf="!loginValid">
+        <span class="wrongCredentials">Wrong credentials</span>
+    </div>
         </form>
     </div>
 </div>

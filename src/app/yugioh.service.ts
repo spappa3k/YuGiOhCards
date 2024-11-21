@@ -12,6 +12,7 @@ export class YugiohService {
   username:string='NicknameDemo'
   password:string='IamYourPassword123'   
   token:string |null =null
+  validLogin:boolean=false;
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
@@ -57,14 +58,18 @@ this.favorites.splice(found, 1)
 }
 
 // LOGIN
-login(inputUsername:string,inputPassword:string){
+login(inputUsername:string,inputPassword:string):boolean{
   
   if(inputUsername=== this.username&&inputPassword=== this.password){
     this.token=this.generateToken();
-    console.log(this.token)
+    console.log(this.token);
     localStorage.setItem('authToken',this.token);
     window.location.reload();
+    return true;
+  }else{
+    return false;
   }
+  
 
 }
 

@@ -443,6 +443,17 @@ font-size: 1.56em;
   top:104px;
 }
 
+
+
+.wrongCredentials{
+  font-size: 1.6em;
+  color: #d30000;
+  position: absolute;
+  border: #d30000 2px solid;
+  padding: 10px;
+  top:390px;
+}
+
 /* FONTS */
 @font-face {
   font-family: yugiohItalic;

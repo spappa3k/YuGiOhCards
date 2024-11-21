@@ -9,8 +9,9 @@ import { YugiohService } from '../yugioh.service';
 })
 export class LoginComponent {
   Login:FormGroup;
-  loginValid:boolean|null=null
+  loginValid:boolean=true;
   UserReg: RegExp=/^[a-zA-Z0-9]{5,15}$/;
+  
 
   constructor(private fb:FormBuilder, private ys:YugiohService){
   this.Login=fb.group({
@@ -20,11 +21,14 @@ password:['',[Validators.required, Validators.minLength(5), Validators.maxLength
   }
 onSubmit(){
   if (this.Login.valid) {
-
     console.log('Form Personal Value:', this.Login.value);
     const username = this.Login.get('username')?.value;
     const password = this.Login.get('password')?.value;
-    this.ys.login(username,password);
+    this.loginValid=this.ys.login(username,password);
+
+    if(!this.loginValid){
+      this.Login.reset();
+    }
 }
 
 }
