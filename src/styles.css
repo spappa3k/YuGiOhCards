@@ -373,19 +373,16 @@ font-size: 1.56em;
 }
 
 /* Form */
-.formShape form {
+.formShape div {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 10px;
   padding-top: 40px;
   align-items: center;
 }
 
 /* Label */
 .formShape form label {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
   width: 60%;
   margin: 0 auto;
   color: #333333;
@@ -436,6 +433,14 @@ font-size: 1.56em;
 /* Effetto attivo sul bottone */
 .formShape form button:active {
   transform: scale(1);
+}
+
+/* errori login */
+.errorSmall{
+  font-size: 0.9em;
+  color: #d30000;
+  position: relative;
+  top:10px;
 }
 
 /* FONTS */
