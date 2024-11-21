@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class YugiohService {
   searchedList?:CardData[]
   favorites:CardData[]=[]
+  username:string='NicknameDemo'
   password:string='IamYourPassword123'
   token:string |null =null
 
@@ -44,13 +45,12 @@ this.favorites.splice(found, 1)
 }
 
 // LOGIN
-login(inputPassword:string): boolean{
-  if(inputPassword=== this.password){
+login(inputUsername:string,inputPassword:string){
+  
+  if(inputUsername=== this.username&&inputPassword=== this.password){
     this.token=this.generateToken();
+    console.log(this.token)
     localStorage.setItem('authToken',this.token);
-    return true;
-  }else{
-    return false;
   }
 
 }
