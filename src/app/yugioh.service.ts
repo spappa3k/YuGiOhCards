@@ -43,6 +43,17 @@ const found = this.favorites.findIndex(card=>{
 this.favorites.splice(found, 1)
 }
 
+// LOGIN
+login(inputPassword:string): boolean{
+  if(inputPassword=== this.password){
+    return true;
+  }else{
+    return false;
+  }
+
+}
+
+
 }
 
 /*
