@@ -1,13 +1,12 @@
 <section class="login">
     <div class="loginShape">
     <div class="formShape">
-        <ng-container  *ngIf="showHelp">
-        <div class="helpDemo">
+        <div class="helpDemo" [class.visible]="showHelp">
             <p>For the purpose of this demo, let's pretend your login credentials are:</p>
-            <p>Username: Spappa3K<br>
+            <p>Username: Master3K<br>
               Password: IamYourPassword123</p>
           </div>
-        </ng-container>
+          
           
         <form [formGroup]="Login" (ngSubmit)="onSubmit()">
            

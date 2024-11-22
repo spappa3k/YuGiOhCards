@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit{
   ngOnInit(): void {
     setTimeout(() => {
       this.showHelp = true; 
-    }, 1000);
+    }, 2500);
   }
 
   constructor(private fb:FormBuilder, private ys:YugiohService){
