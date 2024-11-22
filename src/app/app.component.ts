@@ -13,7 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit{
   title = 'YuGiOhCards';
   dataCard?:CardData
-  logged:boolean|null=null
+  logged:boolean=false
 
 constructor(private ys:YugiohService){}
 

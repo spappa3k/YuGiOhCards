@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { YugiohService } from '../yugioh.service';
 import { Router } from '@angular/router';
+import { Input } from '@angular/core';
 //import { CardData } from '../../models/models';
 
 @Component({
@@ -10,10 +11,14 @@ import { Router } from '@angular/router';
 })
 
 export class HeaderComponent {
+  @Input() logged: boolean = false;
+
 showMenuOn=false;
 searchValue:string=''
 nameToSearch:string=''
 //dataList?:CardData[]
+
+
 
 constructor(public ys:YugiohService, private router:Router){}
 

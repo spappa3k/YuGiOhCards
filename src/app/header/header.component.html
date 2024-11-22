@@ -6,7 +6,7 @@
         <mat-menu #menu="matMenu" class="menuTendina">
             <button mat-menu-item (click)="logout()">Logout</button>
           </mat-menu>
-        <span class="showCase">{{ys.username}}
+        <span class="showCase" *ngIf="logged">Master3K
         </span>
         <span class="example-spacer"></span>
         <button mat-icon-button type="button" [routerLink]="['/favorites']" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
