@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class YugiohService {
   searchedList?:CardData[]
   favorites:CardData[]=[]
-  username:string='NicknameDemo'
+  username:string='Spappa3K'
   password:string='IamYourPassword123'   
   token:string |null =null
   validLogin:boolean=false;
