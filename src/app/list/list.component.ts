@@ -11,7 +11,7 @@ import { Card, CardData } from '../../models/models';
 export class ListComponent implements OnInit{
 nameSearched?:string
 dataSearched?:CardData
-cards?:Card[]
+cards:Card[]=[]
 cardsMultiplier:number=0
 numberListened:number=20
 numberOfObjectsInCall:number=0
@@ -39,6 +39,7 @@ this.numberOfObjectsInCall=0;
       this.cards?.push(...this.dataSearched.data)
       this.cardsMultiplier++;
     })
+    console.log("Lista carte:",this.cards);
       
   }
 

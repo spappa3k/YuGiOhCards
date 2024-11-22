@@ -1,14 +1,25 @@
+  <!-- Mostra il messaggio di errore se non ci sono carte -->
+  <div *ngIf="cards.length == 0" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: rgba(255, 0, 0, 0.8); padding: 20px; color: white; font-size: 1.5em; border-radius: 10px;">
+    No cards found with this name
+    <div style="font-size: 0.8em; margin-top: 10px;">
+        For the purpose of this demo, if you're not a Yu-Gi-Oh fan, try searching for example:<br>exodia, magician, rokket, or dragon.
+    </div>
+</div>
+
 <div *ngIf="dataSearched">
   <div class="container-cards">
-    <ul style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap;  justify-content: center;">
+    <ul style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; justify-content: center;">
       <li *ngFor="let card of cards" style="list-style-type: none;" [routerLink]="['/card', card.id]">
         <mat-card-header>
           <img mat-card-image [src]="card.card_images[0].image_url" alt="Card Image" style="min-width: 300px; max-height: 438px;">
         </mat-card-header>
       </li>
     </ul>
-    <ng-container *ngIf="cards!.length<numberOfObjectsInCall">
-    <button type="button" (click)="doCallToSearch();" class="buttonList">Show more</button>
-  </ng-container>
+    <ng-container *ngIf="cards!.length < numberOfObjectsInCall">
+      <button type="button" (click)="doCallToSearch();" class="buttonList">Show more</button>
+    </ng-container>
   </div>
-</div>
+
+
+
+
