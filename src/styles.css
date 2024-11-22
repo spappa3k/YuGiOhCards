@@ -413,7 +413,7 @@ font-size: 1.56em;
 .formShape form button {
   width: 100px;
   height: 40px;
-  margin: 35px auto;
+  margin: 45px auto;
   background-color: #0099ff;
   color: #ffffff;
   border: none;
@@ -443,15 +443,42 @@ font-size: 1.56em;
   top:104px;
 }
 
+.helpDemo {
+  position: absolute;
+  width: 250px; /* Aumenta leggermente la larghezza per un testo più leggibile */
+  z-index: 1000;
+  top: 400px;
+  left: 0;
+  border: 2px solid #000; /* Margini più nitidi */
+  border-radius: 8px; /* Arrotonda gli angoli */
+  background-color: #f5f5f5; /* Colore di sfondo chiaro */
+  padding: 10px; /* Spazio interno per evitare che il testo tocchi i bordi */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Aggiungi un'ombra per un effetto elegante */
+  line-height: 1.4; /* Migliora la leggibilità */
+  opacity: 1; /* Nascondi inizialmente */
+  transform: translateY(-10px); /* Traslazione iniziale verso l'alto */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transizione fluida */
+padding-top: 0px !important;
+}
+
+.helpDemo p {
+  
+  font-size: 0.85em; /* Riduci la dimensione del font */
+  margin: 0; /* Rimuovi margini tra i paragrafi */
+  margin: 0; /* Rimuovi margini tra paragrafi */
+  padding: 0; /* Rimuovi padding aggiuntivo */
+  color: #000;
+}
 
 
 .wrongCredentials{
-  font-size: 1.6em;
+  font-size: 1em;
   color: #d30000;
   position: absolute;
   border: #d30000 2px solid;
   padding: 10px;
-  top:390px;
+  top:230px;
+  right:50px;
 }
 
 /* FONTS */

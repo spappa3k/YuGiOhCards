@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { YugiohService } from '../yugioh.service';
 
@@ -7,11 +7,17 @@ import { YugiohService } from '../yugioh.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   Login:FormGroup;
   loginValid:boolean=true;
   UserReg: RegExp=/^[a-zA-Z0-9]{5,15}$/;
+  showHelp: boolean = false;
   
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.showHelp = true; 
+    }, 1000);
+  }
 
   constructor(private fb:FormBuilder, private ys:YugiohService){
   this.Login=fb.group({
