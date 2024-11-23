@@ -32,12 +32,15 @@ this.nameToSearch=this.searchValue;
 
 }
 
-logout(){
-  localStorage.removeItem('authToken');
-  this.router.navigate(['/']);
-  window.location.reload();
+  logout() {
+    localStorage.removeItem('authToken');
+    this.router.navigate(['/']).then(() => {
+      window.location.reload();
+    });
+  }
+  
 }
 
-}
+
   
 
