@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit{
   loginValid:boolean=true;
   UserReg: RegExp=/^[a-zA-Z0-9]{5,15}$/;
   showHelp: boolean = false;
+  showPassword: boolean = false;
   
   ngOnInit(): void {
     setTimeout(() => {
@@ -37,4 +38,9 @@ onSubmit(){
 }
 
 }
+
+togglePasswordVisibility() {
+  this.showPassword = !this.showPassword;
+}
+
 }

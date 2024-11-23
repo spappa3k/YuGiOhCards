@@ -12,6 +12,7 @@ import { ListComponent } from './list/list.component';
 import { HomeComponent } from './home/home.component';
 import { FavoritesComponent } from './favorites/favorites.component';
 import { LoginComponent } from './login/login.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { LoginComponent } from './login/login.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()
