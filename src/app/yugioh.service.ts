@@ -16,7 +16,7 @@ export class YugiohService {
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
 
   constructor(private http:HttpClient) { 
-          // Recupera i dati salvati nel localStorage, se presenti
+          // Recupera i dati salvati nel localStorage
       const savedFavorites = localStorage.getItem('favoritesArray');
       if (savedFavorites) {
         this.favorites = JSON.parse(savedFavorites); // Converte la stringa JSON in un array
