@@ -10,7 +10,7 @@ export class YugiohService {
   searchedList?:CardData[]
   favorites:CardData[]=[]
   username:string='Master3K'
-  password:string='IamYourPassword123'   
+  password:string='Password12345'   
   token:string |null =null
 
   apiUrl='https://db.ygoprodeck.com/api/v7/cardinfo.php';
