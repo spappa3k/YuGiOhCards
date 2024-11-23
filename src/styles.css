@@ -545,6 +545,12 @@ width: 40px;
   .showCase{
     display: none;
   }
+
+  .searchField {
+  
+    width: 150px;
+
+}
   
 
 
