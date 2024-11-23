@@ -253,8 +253,12 @@ font-size: 1.1em;
   }
 
 /* Show More  */
+.showMore{
+  color: rgb(223, 223, 223);
+}
 .showMore p{
   text-align: center;
+ 
 }
 
 /* hover img */

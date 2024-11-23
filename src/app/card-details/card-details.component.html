@@ -40,10 +40,10 @@
     </mat-card-content>
     <mat-card-actions>
       <ng-container *ngIf="!showMore">
-      <button mat-button (click)="viewMore()">Show More</button>
+      <button mat-button (click)="viewMore()" style="color: rgb(202, 202, 202);">Show More</button>
     </ng-container>
     <ng-container *ngIf="showMore">
-      <button mat-button (click)="viewMore()">Show Less</button>
+      <button mat-button (click)="viewMore()" style="color: rgb(202, 202, 202);">Show Less</button>
     </ng-container>
     </mat-card-actions>
     <mat-card-content *ngIf="showMore" class="showMore">
