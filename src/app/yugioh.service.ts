@@ -23,8 +23,7 @@ export class YugiohService {
       } else {
         this.favorites = []; // Inizializza come array vuoto
       }
-    
-    
+
   }
 
 findCardById(id:number):Observable<CardData>{
