@@ -68,7 +68,6 @@ getType(type: string): string {
     case 'Trap Card':
       return 'type-trap';   
       
-        
         default:
       return 'type-white';  // Nessuna classe se il tipo non corrisponde
   }
