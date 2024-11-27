@@ -14,7 +14,6 @@ cards?:CardData[]
 
 constructor(private route:ActivatedRoute, public ys:YugiohService){}
 
-
   ngOnInit(): void {
     const savedArray = localStorage.getItem('favoritesArray'); // stringa da convertire in json
     if (savedArray) {
