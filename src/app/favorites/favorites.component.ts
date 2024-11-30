@@ -11,7 +11,6 @@ import { Card, CardData } from '../../models/models';
 export class FavoritesComponent implements OnInit{
 cards?:CardData[]
 
-
 constructor(private route:ActivatedRoute, public ys:YugiohService){}
 
   ngOnInit(): void {
